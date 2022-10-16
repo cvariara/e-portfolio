@@ -575,7 +575,8 @@ footer {
 
 .footer__logo--img {
     width: 100px;
-    height: 100px
+    height: 100px;
+    filter: invert(100%);
 }
 
 .footer__social--list {
