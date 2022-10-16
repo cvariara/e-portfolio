@@ -559,6 +559,10 @@ nav {
     margin: 16px 0;
 }
 
+.project__description--links {
+    margin-top: 16px;
+}
+
 /* FOOTER */
 
 footer {
