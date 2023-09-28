@@ -158,7 +158,7 @@ header {
 }
 
 .dark-theme #personal-logo {
-    filter: none;
+    filter: invert(100%);
 }
 
 .dark-theme .scroll__icon {
@@ -490,19 +490,54 @@ nav {
     margin-bottom: 60px;
 }
 
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.45);
+    
+}
+
+.project__list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
 .project {
-    margin-bottom: 150px;
+    flex: 0 0 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
 }
 
 .project__img {
     width: 100%;
+    height: 100%;
 }
 
 .project__wrapper {
     position: relative;
     border-radius: 20px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
     overflow: hidden;
+    height: 100%;
 }
 
 .project__wrapper:hover .project__description {
@@ -619,6 +654,15 @@ footer {
     .modal__half {
         width: 100%;
     }
+
+    .carousel-container {
+        margin-bottom: 150px; /* Adjust margin for smaller screens */
+    }
+
+    .project {
+        flex: 0 0 50%; /* Show two projects side by side on smaller screens */
+        max-width: 50%; /* Ensure they take up half the width */
+    }
 }
 
 /* Small phones */
@@ -633,6 +677,15 @@ footer {
 
     .nav__link:first-child {
         display: none;
+    }
+
+    .carousel-container {
+        margin-bottom: 100px; /* Further reduce margin for smaller screens */
+    }
+
+    .project {
+        flex: 0 0 100%; /* Show one project per row on the smallest screens */
+        max-width: 100%;
     }
 
     .project__description--para {
